@@ -1,0 +1,567 @@
+* {
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul {
+    margin: 0;
+}
+p {
+    margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+    background-color: #f6f6f6;
+}
+
+
+:root {
+    --bg : #f6f6f6;
+    --nav-bg: #f6f6f6;
+    --inv-bg: rgb(68, 74, 246);
+    --w-text: rgb(251, 251, 255);
+}
+
+html {
+    background-color: rgb(249, 250, 254);
+}
+
+
+
+/* ------------ navbar part starts here -------------- */
+header {
+    height: 70px;
+    background-color: rgb(249, 250, 254);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 30px;
+    position: relative;
+    z-index: 9999999;
+    /* overflow: hidden; */
+    /* position: absolute;
+    width: 100%; */
+}
+.break_div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 30px;
+}
+.break {
+    width: 100%;
+    height: 950%;
+    background-color: var(--inv-bg);
+    position: absolute;
+    right: 0;
+    transform: rotate(-40deg);
+}
+
+
+
+nav {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+
+
+.logo > img {
+    border-radius: 50%;
+    
+}
+
+
+.links_list {
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.links_list li {
+    display: inline;
+    margin: 0px 10px;
+}
+.links_list a {
+    text-decoration: none;
+    color: var(--w-text);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    transition: 0.20s;
+    
+}
+.links_list a:hover {
+    color: rgb(123, 127, 240);
+}
+.dd {
+    position: relative;
+}
+.dd i {
+    padding-left: 7px;
+    transition: 0.25s;
+    color: var(--w-text);
+}
+.dd a {
+    display: inline;
+}
+.nav_dropdown {
+    width: 200px;
+    height: 50px;
+    background-color: var(--bg);
+    /* background-color: rebeccapurple; */
+    position: absolute;
+    top: 45px;
+    left: -10px;
+    padding: 0;
+    transform: scaleY(0);
+    transition: 0.25s;
+    transform-origin: top;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-top: 3px solid var(--inv-bg);
+}
+.nav_dropdown a {
+    width: 100%;
+    margin-top: 10px;
+    font-size: 18px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: black;
+
+}
+
+.dd a:hover~.nav_dropdown, .dd a:active~.nav_dropdown, .nav_dropdown:hover {
+    transform: scaleY(1);
+}
+.dd a:hover, .dd a:active, .nav_dropdown:hover~.dd a {
+    color: rgb(123, 127, 240);
+}
+.dd a:hover~.arrow, .dd a:active~.arrow, .nav_dropdown:hover~.arrow {
+    transform: rotate(-90deg);
+}
+
+
+
+
+/* -------------------------navbar mobile part------------------  */
+
+.icon{
+    width: 50px;
+    height: 50px;
+    background-color: rgb(53, 58, 195);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon svg {
+    width: 35px;
+    height: 35px;
+    color: aliceblue;
+}
+
+.mobile_nav {
+    width: 100%;
+    position: absolute;
+    background-color: aqua;
+    transition: 0.25s;
+    transform-origin: top;
+    transform: scaleY(0);
+}
+.mobile_nav ul {
+    margin: 0;
+    padding: 0;
+}
+.mobile_nav li {
+    width: 100%;
+    background-color: rgb(243, 241, 246);
+    list-style: none;
+    text-decoration: none;
+    padding: 15px;
+    border-top: 1px solid rgb(224, 224, 224) ;
+}
+.mobile_nav a {
+    color: black;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: 600;
+    transform: 0.26s;
+}
+.mobile_nav a:hover {
+    color: rgba(0, 0, 0, 0.411);
+}
+
+
+@media screen and (min-width: 600px) {
+    #icon1 {
+        display: none;
+    }
+}
+@media screen and (max-width: 600px) {
+    #icon1 {
+        display: flex;
+    }
+    .links {
+        display: none;
+    }
+}
+
+
+
+
+
+
+main {
+    background-color: rgb(249, 250, 254);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.e {
+    width: 100%;
+    max-width: 1600px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+    min-height: calc(100svh - 70px);
+    height: 100%;
+    padding: 0px 10px;
+}
+.eimg {
+    max-width: 700px;
+    /* height: 300px; */
+}
+
+article h1, article h2 {
+    font-size: 90px;
+    font-weight: 700;
+    padding: 0;
+    margin: 0;
+}
+article h2 {
+    margin-bottom: 30px;
+}
+article p {
+    color: rgba(0, 0, 0, 0.548);
+}
+
+.ef {
+    position: relative;
+    /* overflow: hidden; */
+    width: 120px;
+    height: 50px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9;
+    background-color: rgb(59, 130, 246);
+}
+
+.ebtn {
+    width: 120px;
+    height: 50px;
+    font-weight: 700;
+    border: none;
+    border: 3px solid rgb(59, 130, 246);
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 30px;
+    position: relative;
+    z-index: 999;
+    color: rgb(255, 255, 255);
+    transition: 0.25s;
+}
+.c {
+    width: 0px;
+    height: 0px;
+    border-radius: 30px;
+    background-color: rgb(249, 250, 254);
+    position: absolute;
+    /* top: 0; */
+    /* border: 3px solid aliceblue; */
+    transition: 0.25s;
+    z-index: 99;
+}
+
+.ebtn:hover~.c {
+    width: 120px;
+    height: 50px;
+}
+.ebtn:hover {
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------footer part starts here-------- */
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.fmain {
+    width: 100%;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    background-color: black;
+    justify-content: space-around;
+    gap: 30px;
+    padding: 20px 150px;
+}
+.breaker {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fbreak {
+    width: 5px;
+    height: 70%;
+    background-color: blueviolet;
+    border-radius: 10px;
+}
+.box1, .box2, .box3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+#box1 {
+    max-width: 500px;
+    margin: 20px 0px;
+}
+.fheading {
+    max-width: 320px;
+}
+.fline {
+    width: 75%;
+    height: 7px;
+    border-radius: 10px;
+    background-color: aliceblue;
+    margin-bottom: 20px;
+}
+#box1 h3 {
+    font-size: 700;
+    font-family: "Roboto", sans-serif;
+}
+#box1 p {
+    font-family: "Roboto", sans-serif;
+}
+.hero_buttons2 {
+    width: 100px;
+    height: 40px;
+    /* background-color: rgb(52, 63, 73); */
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+}
+.join2 {
+    width: 100px;
+    height: 40px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: black;
+}
+.join_b2 {
+    width: 100px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    font-size: 17px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    z-index: 99;
+    transition: 0.10s;
+    border: 2px solid rgb(255, 255, 255);
+    font-weight: 500;
+}
+.blockh2 {
+    text-decoration: none;
+    width: 0px;
+    height: 60px;
+    position: absolute;
+    top: 0;
+    z-index: 9;
+    background-color: rgb(255, 255, 255);
+    /* border-radius: 20px; */
+    transition: 0.25s;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
+.join_b2:hover~.blockh2 {
+    width: 120px;
+}
+.join_b2:hover {
+    color: rgb(0, 0, 0);
+}
+
+#box2 {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-around;
+    gap: 50px;
+}
+.link1, .link2 {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+#box2 a {
+    text-decoration: none;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.699);
+    transition: 0.25s;
+}
+#box2 a:hover {
+    color: rgba(255, 255, 255, 0.438);
+}
+
+#box3 {
+    display: flex;
+    flex-direction: column;
+    /* width: 500px; */
+}
+.fheading2 {
+    width: 150px;
+}
+
+#box3 a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.699);
+    font-size: 18px;
+    margin: 5px 0px;
+    transition: 0.25s;
+}
+#box3 a:hover {
+    color: rgba(255, 255, 255, 0.438); 
+}
+.fimg {
+    width: 100px;
+    height: 100px;
+    align-self: center;
+}
+
+.cc {
+    bottom: 10px;
+    color: rgba(255, 255, 255, 0.76);
+    font-size: 20px;
+    text-align: center;
+}
+@media screen and (max-width:1250px) {
+    .fmain {
+        width: 90%;
+        padding: 30px 0px;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .fmain {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+    #box1, #box2, #box3 {
+        align-items: center;
+        text-align: center;
+    }
+    .fheading, .fheading2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+        /* justify-content: center; */
+    }
+    .hero_buttons2 {
+        width: 100%;
+        background-color: black;
+    }
+}
+
+
+
+
+
+
+
+/* ----------------responsive part starts here---------- */
+
+
+@media screen and (max-width: 1200px) {
+    .eimg {
+        max-width: 500px;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .e {
+        flex-direction: column;
+        padding: 60px 30px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .eimg {
+        max-width: 300px;
+    }
+    article h1, article h2 {
+        font-size: 70px;
+    }
+}
+
+@media screen and (max-width : 350px) {
+    .eimg {
+        max-width: 250px;
+    }
+    article h1, article h2 {
+        font-size: 40px;
+    }
+}
